@@ -1,0 +1,4 @@
+{
+  "name": "eslint-rule-testing-with-vitest",
+  "packageManager": "yarn@3.3.1"
+}
