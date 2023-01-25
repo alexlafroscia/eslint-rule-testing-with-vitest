@@ -1,4 +1,11 @@
 {
   "name": "eslint-rule-testing-with-vitest",
+  "scripts": {
+    "format": "prettier --ignore-unknown --write .",
+    "format:check": "prettier --ignore-unknown --check ."
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  },
   "packageManager": "yarn@3.3.1"
 }

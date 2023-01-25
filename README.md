@@ -22,27 +22,24 @@ Add `dummy-plugin` to the plugins section of your `.eslintrc` configuration file
 
 ```json
 {
-    "plugins": [
-        "dummy-plugin"
-    ]
+  "plugins": ["dummy-plugin"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "dummy-plugin/rule-name": 2
-    }
+  "rules": {
+    "dummy-plugin/rule-name": 2
+  }
 }
 ```
 
 ## Rules
 
 <!-- begin auto-generated rules list -->
+
 TODO: Run eslint-doc-generator to generate the rules list.
+
 <!-- end auto-generated rules list -->
-
-
