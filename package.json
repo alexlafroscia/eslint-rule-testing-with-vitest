@@ -2,10 +2,13 @@
   "name": "eslint-rule-testing-with-vitest",
   "scripts": {
     "format": "prettier --ignore-unknown --write .",
-    "format:check": "prettier --ignore-unknown --check ."
+    "format:check": "prettier --ignore-unknown --check .",
+    "test": "vitest run"
   },
   "devDependencies": {
-    "prettier": "^2.8.3"
+    "eslint": "^8.32.0",
+    "prettier": "^2.8.3",
+    "vitest": "^0.28.1"
   },
   "packageManager": "yarn@3.3.1"
 }

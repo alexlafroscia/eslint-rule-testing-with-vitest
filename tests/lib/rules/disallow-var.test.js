@@ -2,30 +2,34 @@
  * @fileoverview Disallow variables declared with `var`
  * @author Alex LaFroscia
  */
-"use strict";
+
+import { RuleTester } from "../../rule-tester";
 
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/disallow-var"),
-  RuleTester = require("eslint").RuleTester;
-
+const rule = require("../../../lib/rules/disallow-var");
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({
+  parserOptions: {
+    ecmaVersion: 6,
+  },
+});
+
 ruleTester.run("disallow-var", rule, {
-  valid: [
-    // give me some code that won't trigger a warning
-  ],
+  valid: ["const foo = 'bar';", "let foo = 'bar';"],
 
   invalid: [
     {
       code: "var foo = 'bar';",
-      errors: [{ message: "Fill me in.", type: "Me too" }],
+      errors: [
+        { message: "`var` is not allowed", type: "VariableDeclaration" },
+      ],
     },
   ],
 });
