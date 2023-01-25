@@ -3,7 +3,7 @@
  * @author Alex LaFroscia
  */
 
-import { RuleTester } from "../../rule-tester";
+import { VitestRuleTester as RuleTester } from "../../rule-tester";
 
 //------------------------------------------------------------------------------
 // Requirements

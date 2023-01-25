@@ -1,16 +1,16 @@
 import { describe, it } from "vitest";
 import { RuleTester } from "eslint";
 
-RuleTester.describe = (message, callback) => {
-  describe(message, callback);
-};
+export class VitestRuleTester extends RuleTester {
+  static describe(message, callback) {
+    describe(message, callback);
+  }
 
-RuleTester.it = (message, callback) => {
-  it(message, callback);
-};
+  static it(message, callback) {
+    it(message, callback);
+  }
 
-RuleTester.itOnly = (message, callback) => {
-  it.only(message, callback);
-};
-
-export { RuleTester };
+  static itOnly(message, callback) {
+    it.only(message, callback);
+  }
+}
